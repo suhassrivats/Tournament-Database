@@ -4,7 +4,6 @@ Udacity-tournament-database is a simple database project completed for Udacity's
 
 ## Table of contents
 
-- [Download](#download)
 - [Documentation](#documentation)
 - [Testing Information](#testing-information)
 - [Copyright and license](#copyright-and-license)
@@ -41,7 +40,7 @@ CREATE DATABASE tournament
 
 ### 3. Create Tables 
 
-Two database tables will be required. The first table is to track the players in the tournament (this can be used for individual players or teams). The second table is to track matches within the tournament. The create table statements (see below) are also provided in the [tournament.sql](https://github.com/edwardbryant/udacity-tournament-database/blob/master/tournament.sql) file.
+Two database tables will be required. The first table is to track the players in the tournament (this can be used for individual players or teams). The second table is to track matches within the tournament. The create table statements (see below) are also provided in the `tournament.sql` file.
 
 ```
 -- Create player table
@@ -62,7 +61,7 @@ CREATE TABLE match (
 
 ### 4. Import Functions
 
-To use the tournament functions, import [tournament.py](https://github.com/edwardbryant/udacity-tournament-database/blob/master/tournament.py) into your python script.
+To use the tournament functions, `import tournament.py` into your python script.
 
 ```
 import tournament
@@ -97,7 +96,7 @@ Returns a list containing pairs of players for the next round of the tournament.
 
 ## Testing Information
 
-The project files also include the file [tournament_test.py](https://github.com/edwardbryant/udacity-tournament-database/blob/master/tournament_test.py), which was used for testing that python functions met Udacity's project requirements. It is not needed to create a swiss-system tournament database or to use the provided functions. However, some may find it useful to test any modifications made to the tournament functions. 
+The project files also include the file `tournament_test.py`, which was used for testing that python functions met Udacity's project requirements. It is not needed to create a swiss-system tournament database or to use the provided functions. However, some may find it useful to test any modifications made to the tournament functions. 
 
 ## Copyright and License
 
