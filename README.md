@@ -33,7 +33,7 @@ Clone the project files: `git clone https://github.com/suhassrivats/Tournament-D
 Log into your PostgreSQL console and create a new database, for example:
 
 
-```
+```psql
 CREATE DATABASE tournament 
 
 ```
@@ -42,7 +42,7 @@ CREATE DATABASE tournament
 
 Two database tables will be required. The first table is to track the players in the tournament (this can be used for individual players or teams). The second table is to track matches within the tournament. The create table statements (see below) are also provided in the `tournament.sql` file.
 
-```
+```psql
 -- Create player table
 CREATE TABLE player (
     id serial PRIMARY KEY,
@@ -63,7 +63,7 @@ CREATE TABLE match (
 
 To use the tournament functions, `import tournament.py` into your python script.
 
-```
+```python
 import tournament
 
 ```
