@@ -5,6 +5,26 @@
 
 import psycopg2
 
+"""
+def connect(database_name="tournament"):
+    try:
+        db = psycopg2.connect("dbname={}".format(database_name))
+        cursor = db.cursor()
+        return db, cursor
+    except:
+        print("<error message>")
+
+def registerPlayer(name):
+    db, cursor = connect()
+
+    query = "INSERT INTO players (name) VALUES (%s);"
+    parameter = (name,)
+    cursor.execute(query, parameter)
+
+    db.commit()
+    db.close()
+"""
+
 
 def connect():
     """Connect to the PostgreSQL database.  Returns a database connection."""
@@ -15,7 +35,8 @@ def deleteMatches():
     """Remove all the match records from the database."""
     db = connect()
     c = db.cursor()
-    c.execute("DELETE FROM match")
+    # c.execute("DELETE FROM match")
+    c.execute("TRUNCATE match")
     db.commit()
     db.close()
 
@@ -24,7 +45,8 @@ def deletePlayers():
     """Remove all the player records from the database."""
     db = connect()
     c = db.cursor()
-    c.execute("DELETE FROM player")
+    # c.execute("DELETE FROM player")
+    c.execute("TRUNCATE player CASCADE")
     db.commit()
     db.close()
 
@@ -110,8 +132,9 @@ def swissPairings():
     """
     con = connect()
     cursor = con.cursor()
-    cursor.execute(
-        "SELECT id,name,no_of_wins FROM no_of_matches ORDER BY no_of_wins DESC;")
+    cursor.execute('''SELECT id,name,no_of_wins
+                        FROM no_of_matches
+                        ORDER BY no_of_wins DESC;''')
     rows = cursor.fetchall()
     con.close()
     i = 0
