@@ -34,8 +34,7 @@ Log into your PostgreSQL console and create a new database, for example:
 
 
 ```psql
-CREATE DATABASE tournament 
-
+CREATE DATABASE tournament
 ```
 
 ### 3. Create Tables 
